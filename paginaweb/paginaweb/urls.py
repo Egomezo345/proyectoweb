@@ -23,6 +23,8 @@ urlpatterns = [
 
     path('servicios/', include('servicios.urls')),
 
+    path('blog/', include('blog.urls')),
+
     path('', include('paginawebapp.urls')),
 
 ]
