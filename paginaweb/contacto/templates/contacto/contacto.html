@@ -4,7 +4,17 @@
 
 {% block content %}
 
-<div><p style="color: white">Estamos en contacto</p></div>
+<div class="contenedorFormulario">
+
+    <form action="" method="POST" style="text-aling: center;">
+        {%csrf_token%}
+        <table style="color: white; margin: 20px auto;">{{miformulario.as_table}}</table>
+
+        <input type="submit" value="ENVIAR" style="width: 150px;">
+
+    </form>
+
+</div>
 
 {% endblock %}
 
