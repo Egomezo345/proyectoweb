@@ -1,16 +1,18 @@
 {% extends "paginawebapp/base.html" %}
-
 {% load static %}
+
 
 {% block content %}
 
-<form> method="post" action="">
-
+<form method="post" enctype="multipart/form-data" action="" style="color: white;">
     {% csrf_token %}
+    <div style="width: 40%; margin: auto;">
 
-    {{form}}
+        {{form}}
+        <button type="submit" class="btn btn-success">Regístrarse</button>
 
+    </div>
 </form>
 
-{% endblock %}
 
+{% endblock%}
