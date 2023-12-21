@@ -3,8 +3,47 @@
 {% load static %}
 
 {% block content %}
+<div class="container">
 
-<div><p style="color: white;">Esta es una prueba</p></div>
+    <div style="float:right ">
 
+        <p style="color: white">Total: Q. {{importe_total_carro}}</p>
+
+        {% include "carro/widget.html" %}
+
+    </div>
+
+    <div class="row">
+
+    {% for producto in productos %}
+
+        <div class="col-md-3">
+
+
+        <div class="card" style="width: 100%; margin: 10px 10px;">
+
+            <img src="{{producto.imagen.url}}" class="card-img-top">
+
+            <div class="card-body" style="text-aling: center;">
+
+               <h7 class="card-title">{{producto.nombre}}</h7>
+
+                <p class="card-text">Q &nbsp;{{producto.precio}}</p>
+
+            </div>
+
+            <div class="card-footer text-center">
+
+                <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Asignar curso</a>
+
+            </div>
+
+        </div>
+
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
 {% endblock %}
 
