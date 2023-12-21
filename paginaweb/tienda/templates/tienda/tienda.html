@@ -8,8 +8,13 @@
     <div style="float:right ">
 
         <p style="color: white">Total: Q. {{importe_total_carro}}</p>
+        {% if request.user.is_authenticated %}
+            {% include "carro/widget.html" %}
+        {% else %}
 
-        {% include "carro/widget.html" %}
+           <p style="color: white;">Inicia sesion para ver el carro</p>
+
+        {% endif %}
 
     </div>
 
