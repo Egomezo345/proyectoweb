@@ -6,8 +6,19 @@
 
 <form method="post" enctype="multipart/form-data" action="" style="color: white;">
     {% csrf_token %}
+
     <div style="width: 40%; margin: auto;">
 
+        {% if messages %}
+
+        {% for mensaje in messages %}
+        <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span>
+
+
+        {% endfor %}
+
+        {% endif %}
+        <br/><br/><br/>
         {{form}}
         <button type="submit" class="btn btn-success">Login</button>
 
