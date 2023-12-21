@@ -24,6 +24,19 @@
         <span class="site-heading-lower">Academia</span>
       </h1>
 
+    <div style="text-align: right; margin-right: 80px; color: white;">
+
+        {% if user.is_authenticated %}
+
+        Hola {{user.username}} &nbsp; &nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: white;">Cerrar sesion</a>
+
+        {% else %}
+
+        <a href="#" style="color: white;">Login</a> &nbsp; <a href="{% url 'autenticacion' %}" style="color: white">Registrarse</a> &nbsp;
+
+        {% endif %}
+
+    </div>
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
