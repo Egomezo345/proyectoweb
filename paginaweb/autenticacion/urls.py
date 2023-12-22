@@ -1,6 +1,7 @@
 from django.urls import path
 
 from .views import VRegistro, cerrar_sesion, logear
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
 

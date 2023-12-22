@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLA {{nombreusuario}}</title>
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px;
+    }
+    img {
+      width: 100%;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+    .col-md-6 {
+      width: 50%;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .btn {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-
 <body>
-    HOLA {{nombreusuario}}<br/>
-    No de asignacion: {{pedido.id}} <br/>
-    Email del usuario: {{emailusuario}}<br/>
-    Cursos asignados: {{lineas_pedido}}
+
+  <header>
+    <img src="https://via.placeholder.com/150x150" alt="Logo de la empresa">
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1></h1>
+        <p>
+            No de asignacion: {{pedido.id}}<br/>
+            Email del usuario: {{emailusuario}}<br/>
+            Cursos asignados: {{lineas_pedido}}<br/>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://via.placeholder.com/300x300" alt="Imagen complementaria">
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>
+      Academia siempre contigo <strong>pedrogonzales235e@gmail.com</strong>.
+    </p>
+  </footer>
 
 </body>
-
 </html>
+
+

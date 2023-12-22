@@ -60,7 +60,7 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    
+
     "theme": "darkly",
 }
 
@@ -165,9 +165,9 @@ MESSAGE_TAGS={
     mensajes_de_error.ERROR: 'danger',
 }
 
-EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_USE_TLS=True
-EMAIL_PORT=587
-EMAIL_HOST_USER="pedrogonzales235@gmail.com"
-EMAIL_HOST_PASSWORD="Pesa123e"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "pedrogonzales235e@gmail.com"
+EMAIL_HOST_PASSWORD = "yhjk mqqw puyx eosr"
