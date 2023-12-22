@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'pedidos',
 ]
 
+
 #configuracion jazzmin
 
 JAZZMIN_SETTINGS = {

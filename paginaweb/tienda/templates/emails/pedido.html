@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOLA {{nombreusuario}}</title>
-  <style>
-    body {
-      background-color: #ffffff;
-    }
-    header {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 10px;
-    }
-    img {
-      width: 100%;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .row {
-      display: flex;
-      justify-content: center;
-    }
-    .col-md-6 {
-      width: 50%;
-    }
-    .text-center {
-      text-align: center;
-    }
-    .btn {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Cursos</title>
+    <style>
+        body {
+            font-family: 'Arial', Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #8d8d8d;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .header-image {
+            margin-bottom: 20px;
+        }
+
+        .header-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .courses {
+            background-color: #d8d8d8;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .courses strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .courses ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .courses li {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #8d8d8d;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #797979;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="header-image">
+            <img src="C:\Users\josue y darlin\Desktop/Imagen1.jpg" alt="Header Image">
+            <div class="container">
+                <h1>Universidad NIKOLA TESLA</h1>
+                <p>Estimado <strong>{{nombreusuario}}</strong>,</p>
+                <p>Estimado <strong>{{emailusuario}}</strong>,</p>
+                <p>Numero de pedido <strong>{{pedido.id}}</strong>,</p>
+                <p>¡Te informamos que has sido asignado a los siguientes cursos para el próximo semestre!</p>
+                <p><strong>Cursos Asignados:</strong></p>
+                <div class="courses">
+                    <ul>
+                        <li>{{lineas_pedido}}</li>
+                        <li></li>
+                        <!-- no se cual de los 2 codigos mandara a llamar el pedido pero puse ambos para ver -->
+                    </ul>
+                </div>
+                <p>"Conectando Mentes Brillantes en la Universidad NIKOLA TESLA: Más Allá de los Límites, Más Allá de las Expectativas." </p>
+                <p>Puedes consultar más detalles en tu perfil en nuestra plataforma.</p>
+                <a href="[Enlace a la Plataforma]" class="button">Ir a la Plataforma</a>
+            </div>
+            </div>
+        </div>
 
-  <header>
-    <img src="https://via.placeholder.com/150x150" alt="Logo de la empresa">
-  </header>
+ </body>
 
-  <main class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1></h1>
-        <p>
-            No de asignacion: {{pedido.id}}<br/>
-            Email del usuario: {{emailusuario}}<br/>
-            Cursos asignados: {{lineas_pedido}}<br/>
-        </p>
-      </div>
-      <div class="col-md-6">
-        <img src="https://via.placeholder.com/300x300" alt="Imagen complementaria">
-      </div>
-    </div>
-  </main>
-
-  <footer class="container">
-    <p>
-      Academia siempre contigo <strong>pedrogonzales235e@gmail.com</strong>.
-    </p>
-  </footer>
-
-</body>
 </html>
+
+
+
 
 
