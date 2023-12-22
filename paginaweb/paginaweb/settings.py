@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'paginaweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'paginawebapp',
+        'NAME':'paginawebapp1',
         'USER':'postgres',
         'PASSWORD': 'Pesa123e',
         'HOST': '127.0.0.1',

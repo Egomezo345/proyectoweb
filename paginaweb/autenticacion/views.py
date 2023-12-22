@@ -3,16 +3,17 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from .forms import CustomUserCreationForm
 # Create your views here.
 
 class VRegistro(View):
 
     def get(self, request):
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
         return render(request, "registro/registro.html", {"form": form})
 
     def post(self, request):
-        form=UserCreationForm(request.POST)
+        form=CustomUserCreationForm(request.POST)
 
         if form.is_valid():
 
@@ -45,6 +46,6 @@ def logear(request):
                 messages.error(request, "usuario no valido")
         else:
             messages.error(request, "informacion incorrecta")
-            
+
     form=AuthenticationForm()
     return render(request, "login/login.html", {"form": form})
