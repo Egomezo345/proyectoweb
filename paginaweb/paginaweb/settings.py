@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +48,22 @@ INSTALLED_APPS = [
     'carro',
     'pedidos',
 ]
+
+#configuracion jazzmin
+
+JAZZMIN_SETTINGS = {
+
+    "site_logo": "books/img/logo.png",
+    "login_logo": None,
+    "site_logo_classes": "img-circle",
+
+}
+
+JAZZMIN_UI_TWEAKS = {
+    
+    "theme": "darkly",
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
