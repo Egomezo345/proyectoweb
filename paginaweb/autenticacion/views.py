@@ -5,6 +5,30 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from .forms import CustomUserCreationForm
 # Create your views here.
+from django.shortcuts import render, redirect
+from .forms import CustomUserCreationForm
+from .models import UserProfile
+
+def register_view(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Guardar el usuario
+            user = form.save()
+
+            # Crear y guardar el perfil
+            profile = UserProfile.objects.create(
+                user=user,
+                cui=form.cleaned_data['cui'],
+                profile_imagen=form.cleaned_data['profile_imagen'],
+            )
+
+            return redirect('perfil')  # Redirigir a la página de perfil
+    else:
+        form = CustomUserCreationForm()
+
+    return render(request, 'registro.html', {'form': form})
+
 
 class VRegistro(View):
 

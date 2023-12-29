@@ -7,6 +7,7 @@ from django.forms.forms import Form
 
 from django.contrib.auth import get_user_model
 
+
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta:

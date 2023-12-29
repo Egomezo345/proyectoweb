@@ -62,4 +62,3 @@ def enviar_mail(**kwargs):
     to=kwargs.get("email_usuario")
     #to = "gomezericko345@gmail.com"
     send_mail(asunto, mensaje_texto, from_email, [to], html_message=mensaje)
-

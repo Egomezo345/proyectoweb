@@ -41,6 +41,10 @@
   box-sizing: border-box;
 }
 
+.justify-text {
+  text-align: justify;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;

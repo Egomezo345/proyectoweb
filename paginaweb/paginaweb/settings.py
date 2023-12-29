@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 from django.contrib.messages import constants as mensajes_de_error
@@ -104,14 +105,13 @@ WSGI_APPLICATION = 'paginaweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'paginawebapp1',
+        'NAME':'postgres',
         'USER':'postgres',
-        'PASSWORD': 'Pesa123e',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'Pesa123e!1',
+        'HOST': 'database-1.c9qyg2aqkx5q.us-east-2.rds.amazonaws.com',
         'DATABASE_PORT':'5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
